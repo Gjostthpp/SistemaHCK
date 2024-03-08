@@ -3,7 +3,7 @@
 # Cria a pasta "scripts" se ela não existir
 mkdir -p scripts
 
-# Script de cálculos
+# criação do banner 
 cat <<EOF > scripts/banner.py
 import os
 import time
@@ -158,13 +158,13 @@ while True:
         os.system("clear")
 EOF
 
-# Script de medidas
+# versão do sistema 
 cat <<EOF > scripts/função.py
 def version():
     print("\033[34mVersão-BETA\033[m \033[35m2.6\033[m")
 EOF
 
-# Script de gerador de senha
+# interface 
 cat <<EOF > scripts/interface.py
 from função import version
 version()
