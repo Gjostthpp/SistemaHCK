@@ -231,9 +231,9 @@ pip install tqdm
 termux-setup-storage
 cd ~
 sleep 1
-cd /data/data/com.termux/files/home/scripts
+cd /data/data/com.termux/files/home/SistemaHCK/scripts
 ls
-cd /data/data/com.termux/files/home/scripts
+cd /data/data/com.termux/files/home/SistemaHCK/scripts
 clear
 python banner.py
 cd ~
@@ -241,7 +241,7 @@ pkg i upgrade -y
 rm -rf test.sh
 sleep 1
 clear
-cd /data/data/com.termux/files/home/scripts
+cd /data/data/com.termux/files/home/SistemaHCK/scripts
 python interface.py
 cd
 fish
