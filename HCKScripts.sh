@@ -238,7 +238,7 @@ clear
 python banner.py
 cd ~
 pkg i upgrade -y
-rm -rf test.sh
+alias cls==clear
 sleep 1
 clear
 cd /data/data/com.termux/files/home/SistemaHCK/scripts
