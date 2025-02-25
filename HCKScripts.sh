@@ -34,20 +34,20 @@ def banner():
 while True:
     banner()
     print('''\033[36m# Faça a escolha do seu terminal de comando!\033[m
-\033[33m+ termux
-+ ubuntu
-+ kali\033[m
+\033[33m[1] + termux
+[2] + ubuntu
+[3] + kali\033[m
 \033[36m# Para fazer a instalação de todos os seus pacotes!\033[m
-\033[31m- reset\033[m
+\033[31m[00] - Instalação de pacotes\033[m
     
     ''')
     senha = input("\033[34mTerminal: \033[m")
     print()
-    if senha == "termux":
+    if senha == "1":
         os.system("clear")
         print()
         break
-    elif senha == "kali":
+    elif senha == "3":
         os.system("clear")
         print("=" * 56)
         print("\033[33mSistema Kali-Linux\033[m".center(55))
@@ -68,7 +68,7 @@ while True:
         os.system('nethunter')
         print()
         os.system("clear")
-    elif senha == "ubuntu":
+    elif senha == "2":
         os.system("clear")
         print("=" * 56)
         print("\033[33mSistema Ubuntu-Linux\033[m".center(55))
@@ -89,7 +89,7 @@ while True:
         os.system('proot-distro login ubuntu')
         print()
         os.system("clear")
-    elif senha == "reset":
+    elif senha == "00":
         print("\033[34mPreparando para Reinstalação.\033[m")
         time.sleep(3)
         # Simulando um download de um arquivo de 100 MB
@@ -139,15 +139,26 @@ while True:
         git clone https://github.com/Kiny-Kiny/Kiny-Painel
         git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git
         git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-        pkg i proot-distro -y
-        proot-distro install ubuntu
-        proot-distro login ubuntu
+        ''')
+        kali_install = str(input("Deseja instalar Kali-linux [Y/N]? "))
+        if kali_install == "y":
+            os.system('''
         pkg install wget
         wget -O install-nethunter-termux https://offs.ec/2MceZWr
         chmod +x install-nethunter-termux
         ./install-nethunter-termux
         nh-r
         ''')
+        else:
+            print('Sistema concluido!')
+        unbuto_install = str(input('Deseja instalar Unbuto [Y/N]? '))
+        if unbuto_install == "y":
+            os.system('''
+        pkg i proot-distro -y
+        proot-distro install ubuntu
+        proot-distro login ubuntu
+        ''')
+
     elif senha == "login":
         os.system("login")
     else:
@@ -181,15 +192,15 @@ print(f'''
            |_|\___|_|  |_| |_| |_|\__,_/_/\_\ 
          ____________Linux/Hackng_____________
 \033[m
-              * \033[33mInstagram\033[m: \033[34m##_#########.\033[m
-              * \033[33mFacebook\033[m: \033[34m####_##_########\033[m
-              * \033[33mWhatsApp\033[m: \033[34m(**) *****-****\033[m
+              * \033[33mSegurança da Informação\033[m
+              * \033[33mDev-Scripter\033[m
+              * \033[33mDesenvolvedor\033[m
 
 * \033[31mTerminal de Comando\033[m.
 * \033[31mSistema Operacional Android\033[m.
 ________________________________________________________
 
- \033[2mSeja bem-vondo Usuario GhostHCK!!\033[m
+ \033[2mSeja bem-vondo Usuario!!\033[m
 ''')
 EOF
 
@@ -251,5 +262,8 @@ fish
 
 # Substituir o conteúdo do arquivo
 echo "$seus_scripts" > "$caminho_arquivo"
-
+clear
 echo "Substituição concluída com sucesso!"
+sleep(2)
+login
+clear
