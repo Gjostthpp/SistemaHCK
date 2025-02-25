@@ -264,6 +264,6 @@ fish
 echo "$seus_scripts" > "$caminho_arquivo"
 clear
 echo "Substituição concluída com sucesso!"
-sleep(2)
+sleep 2
 login
 clear
