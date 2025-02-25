@@ -200,7 +200,7 @@ print(f'''
 * \033[31mSistema Operacional Android\033[m.
 ________________________________________________________
 
- \033[2mSeja bem-vondo Usuario!!\033[m
+ \033[2mSeja bem-vindo Usuario!!\033[m
 ''')
 EOF
 
